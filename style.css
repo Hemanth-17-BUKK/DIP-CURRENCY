@@ -1,0 +1,608 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;/*nav options will be displayed side by side*/
+    justify-content: space-between;/*space between the nav-items*/
+    align-items: center;/*nav items will be aligned in the center*/
+    padding: 30px 5%;/*padding from top and bottom 30px - left and right 5% */
+    position: fixed;/*the nav-bar is fixed won't change with */
+    width: 100%;/*it occupies 100% width as header*/
+    top: 0;/*to display from top*/
+    z-index: 1000;/*the image will be in background of nav-bar with blur*/
+    background-color: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);/*when we scroll the website the nav-bar shows blur content when overrided*/
+}
+
+.logo {
+    font-size: 28px;/*size of DIP-CURRENCY*/
+    font-weight: 700;/*weight of font*/
+    color: #ffffff;/*color of the logo*/
+    text-decoration: none;/*no underlines or dotted lines or any decoration*/
+}
+
+.logo span {
+    color: #6c5ce7;/*to make DIP appear in blue color */
+}
+
+.nav-links {
+    display: flex;/*items will be displayed side by side*/
+    list-style: none;/*we used list to make the nav-options so ikkada list type define chesina*/
+}
+
+.nav-links li {
+    margin: 0 15px;/*prathi nav-option ki top-bottom=0 and left-right=15px margin apply chesina*/
+}
+
+.nav-links a {
+    color: #ffffff;/*nav links starting lo white untayi*/
+    text-decoration: none;/*no decoration implemented*/
+    font-weight: 500;/*weight of the nav-options*/
+    font-size: 16px;/*font size of the nav-options*/
+    transition: color 0.3s;/*transition specify chesthunnam like hover chesthey color change avvali adhi 0.3s maarali*/
+}
+
+.nav-links a:hover {
+    color: #6c5ce7;/*user hover chesthey blue color ga maaruthayi*/
+}
+
+.mainright-button {
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);/*button background color*/
+    color: white;/*content color in button*/
+    border: none;/*no border*/
+    padding: 12px 25px;/*padding from top-bottom=12px and padding from left-right=25px so that button box koncham neat ga untadhi*/
+    border-radius: 30px;/*end lo smooth curve ravataniki*/
+    font-weight: 600;/*font weigth is used to show the thickness*/
+    cursor: pointer;/*when we point at the button then cursor style will be changed to pointer*/
+    transition: transform 0.3s, box-shadow 0.3s;/*transition apply chesthunnam with 0.3s*/
+    /* box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);we are specifying box-shadow here */
+}
+
+.mainright-button:hover {
+    transform: translateY(-3px);/*translate ane transform use chesam so that when hovered it will push upwards*/
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);/*we are specifying box-shadow here*/
+}
+
+/* header finished and now we are into main content */
+
+.main {
+    height: 100vh;/*height of the main content*/
+    display: flex;/*to display side by side*/
+    align-items: center;/*to display in the center*/
+    padding: 0 5%;/*padding 0 from top-bottom and 5% FROM left-right*/
+    margin-top: -80px;/*from top*/
+    position: relative;/*relative position applied */
+    overflow: hidden;/*to restrict image overflow*/
+}
+
+.main-content {
+    max-width: 600px;/*content width 600px ichham so it will occupy only the upto 600px*/
+    z-index: 2;/*to make it appear above the content*/
+}
+
+.main h1 {
+    font-size: 60px;/*heading size in main page*/
+    font-weight: 700;/*font weight to make it look thick*/
+    margin-bottom: 20px;/*margin from bottom*/
+    line-height: 1.2;/*the distance between two lines*/
+}
+
+.main h1 span {
+    color: #6c5ce7;/*to make DIGITAL CURRENCY appear in blue*/
+}
+
+.main p {
+    font-size: 18px;/*paragraph size*/
+    color: #b8b8b8;/*color of the sub-paragraph*/
+    margin-bottom: 30px;/*space from bottom*/
+    line-height: 1.6;/*the space between two lines*/
+}
+
+.main-buttons {
+    display: flex;/*to make buttons appear side by side*/
+    gap: 20px;/*the gap between buttons is 20px*/
+}
+
+.secondary-button {
+    background: transparent;/*button container is transparent same colour as background*/
+    color: white;/*content color in button*/
+    border: 2px solid #6c5ce7;/*border color of the button*/
+    padding: 12px 25px;/*the padding from top-bottom and left-right */
+    border-radius: 30px;/*border curves*/
+    font-weight: 600;/*to make it thick*/
+    cursor: pointer;/*when cursor is pointed it will change to pointer*/
+    transition: transform 0.3s, box-shadow 0.3s;/*transition applied*/
+}
+
+.secondary-button:hover {
+    transform: translateY(-3px);/*when hovered on secondary button it will transform*/
+    background: rgba(108, 92, 231, 0.1);/*when hovered the color will change*/
+}
+
+.main-image {
+    position: absolute;/*position of image*/
+    right: 5%;/*position of image from right side 5%*/
+    top: 50%;/*from top 50%*/
+    width: 600px;/*restricting image width to 600px*/
+    z-index: 1;/*to make it appear above the content*/
+    animation: float 6s ease-in-out infinite;/*animation applied */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-50%) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(-20px);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(0px);
+    }
+}
+
+.stats {
+    display: flex;/*to display side by side*/
+    justify-content: space-around;/*to add space between each stat */
+    padding: 80px 5%; /*padding from top-bottom and left-right (it appears like a box with black background)*/
+    background: rgba(20, 20, 20, 0.7);/*bg color*/
+    margin: 100px 0;/*margin from top-bottom and left-right*/
+    border-radius: 20px;/*you can observe it at the end of the box*/
+    position: relative;/*box position is defined*/
+    z-index: 2;/*to make it appear above the content*/
+}
+
+.stat-item {
+    text-align: center;/*captions below the stats aligned center*/
+}
+
+.stat-number {
+    font-size: 50px;/*font size of stat number*/
+    font-weight: 700;/*thickness*/
+    color: #6c5ce7;/*color of the stat-number*/
+    margin-bottom: 10px;/*gap between stat-number and stat-label*/
+}
+
+.stat-label {
+    font-size: 18px;/*font size of stat label*/
+    color: #b8b8b8;/*color of the stat label*/
+}
+
+
+/*-----this is the begining of new section called features*/
+.features {
+    padding: 100px 5%;/*padding from top-bottom to make space*/
+    text-align: center;/*text will be displayed in center*/
+}
+
+.section-title {
+    font-size: 40px;/*title size*/
+    font-weight: 700;/*font weight*/
+    margin-bottom: 15px;/*gap between section title and section subtitle */
+}
+
+.section-subtitle {
+    font-size: 18px;/*font size of subtitle*/
+    color: #b8b8b8;/*color of text*/
+    max-width: 700px;/*text will be covered within 700px width */
+    margin: 0 auto 60px;/*margin from top 0 and margin from left-right is auto because it is aligned center and margin-bottom is 60px*/
+}
+
+.features-grid {
+    display:block;/*we want our cards to occupy a row*/
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));/*to make them appear row wise*/
+    gap: 30px;/*gap between the cards*/
+    margin-top: 150px;/*margin from top*/   
+}
+
+.feature-card {
+    background: rgba(20, 20, 20, 0.7);/*background color of card*/
+    padding: 40px 30px;/*padding from top-bottom and left-right*/
+    border-radius: 15px;/*border radius*/
+    transition: transform 0.3s, box-shadow 0.3s;/*transition applied*/
+    position: relative;/*position of cards*/
+    overflow: hidden;/*to hide the overflow content*/
+    z-index: 1;/*to make it appear above the content*/
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;/*position absolute with respect to parent class*/
+    top: -2px;/*position from top*/
+    left: -2px;/*position from left*/
+    right: -2px;/*position from right*/
+    bottom: -2px;/*position from bottom*/
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);/*background color when hovered*/
+    z-index: -2;/*to not to make it appear above the content*/
+    border-radius: 16px;/*border radius is defined*/
+    opacity: 0;/*opacity 0 makes it disappear in the begging but when hovered the transitions will apply*/
+    transition: opacity 0.3s;/*transition applied*/
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);/*transform along the Y-axis*/
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);/*when hovered it will show background shadow*/
+}
+
+.feature-card:hover::before {
+    opacity: 1;/*when hovered it will be displayed*/
+}
+
+.feature-card-content {
+    position: relative;/*position is relative*/
+    z-index: 1;/*to make it appear over the content*/
+    background: #141414;/*background color of the content*/
+    padding: 20px;/*padding from sides*/
+    border-radius: 10px;/*border radius*/
+    height: 100%;/*height of the content*/
+}
+
+.feature-icon {
+    font-size: 50px;/*size of the icon*/
+    margin-bottom: 20px;/*margin from tleft-right*/
+    color: #6c5ce7;/*color of the icon*/
+}
+
+.feature-title {
+    font-size: 22px;/*font size of title*/
+    font-weight: 600;/*font weight of title*/
+    margin-bottom: 15px;/*margin from description*/
+}
+
+.feature-description {
+    color: #b8b8b8;/*color of the description*/
+    font-size: 16px;/*font size of the description*/
+    line-height: 1.6;/*line spacing between two lines*/
+}
+
+
+.testimonials {
+    padding: 100px 5%;/*padding from top-bottom and left-right*/
+    text-align: center;/*to make it appear in the center*/
+}
+
+.testimonial-card {
+    background: rgba(20, 20, 20, 0.7);/*background color*/
+    padding: 40px;/*padding of the card*/
+    border-radius: 15px;/*border radius applied to the card*/
+    max-width: 800px;/*width applied to make it appear in a 800px box*/
+    margin: 0 auto;/*this margin applied to make it appear in the center(top-bottom margin'0'&left-right'auto')*/
+    position: relative;/*position applied*/
+}
+
+.testimonial-text {
+    font-size: 18px;/*size of the text inside the box*/
+    font-style: italic;/*font style defined*/
+    color: #ffffff;/*text color*/
+    margin-bottom: 30px;/*margin from bottom is 30px*/
+    line-height: 1.6;/*line spacing is defined*/
+}
+
+.testimonial-author {
+    display: flex;/*to make the picture and details appear side by side*/
+    align-items: center;/*to make it appear center*/
+    justify-content: center;/*center*/
+}
+
+.author-image {
+    width: 60px;/*image width specified*/
+    height: 60px;/*image height specified*/
+    border-radius: 50%;/*border radius to make a circle*/
+    margin-right: 20px;
+    object-fit: cover;/*to make it fit to the circle*/
+}
+
+.author-info h4 {
+    font-size: 18px;/*size of the author info*/
+    font-weight: 600;/*weight of the text*/
+    margin-bottom: 5px;/*margin from bottom*/
+}
+
+.author-info p {
+    color: #b8b8b8;/*font color*/
+    font-size: 14px;/*size of the text*/
+}
+
+.cta-section {
+    padding: 100px 5%;/*padding applied to make it appear more spacious*/
+    text-align: center;/*text is aligned in the center*/
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);/*background color*/
+    position: relative;/*container position is relative*/
+    overflow: hidden;/*to prevent the content from exceeding box*/
+}
+
+.cta-section::before {
+    content: '';/*content property before cta section*/
+    position: absolute;/*position is defined*/
+    top: 0;/*top-0 to make it appear in the background*/
+    left: 0;/*same as above*/
+    width: 100%;/*to occupy complete box*/
+    height: 100%;/*to occupy complete box*/
+    background: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop') no-repeat center center;
+     /*In the background we inserted an image*/
+    background-size: cover;/*to make it appear 100%*/
+    opacity: 0.1;/*to make it appear 0.1 opacity because we want it to appear with background color as well*/
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;/*relative with the parent container*/
+    z-index: 1;/*to make it appear over the content*/
+    max-width: 700px;/*the text will occupy only 700px width*/
+    margin: 0 auto;/*top-bottom 0 margin but left-right should be with respect to parent container*/
+}
+
+.footer {
+    padding: 50px 5%;/*padding from top-bottom is 50px and left-right is 5%*/
+    background: #0a0a0a;/*background color*/
+    text-align: center;/*to make it appear in the center*/
+}
+
+.footer-logo {
+    font-size: 28px;/*font size of footer text-DIP CURRENCY*/
+    font-weight: 700;/*font weight to make it appear thick*/
+    color: #ffffff;/*color of the title text*/
+    text-decoration: none;/*we dont want any text decoration */
+    margin-bottom: 20px;/*gap from bottom content*/
+    display: inline-block;/*to make it appear with the above properties*/
+}
+
+.footer-logo span {
+    color: #6c5ce7;/*logo color for CURRENCY*/
+}
+
+.footer-links {
+    display: flex;/*to make them appear side by side*/
+    justify-content: center;/*to make them appear in the middle*/
+    list-style: none;/*we are using list and we dont want any numbers are bullets*/
+    margin: 20px 0;/*margiin from top-bottom and left-right*/
+}
+
+.footer-links li {
+    margin: 0 15px;/*gap between each link*/
+}
+
+.footer-links a {
+    color: #b8b8b8;/*color of the anchor tag content*/
+    text-decoration: none;/*to make it appear with no decorations*/
+    transition: color 0.3s;/*transition applied when hovered*/
+}
+
+.footer-links a:hover {
+    color: #6c5ce7;/*when hovered the color will be changed to blue color*/
+}
+
+
+/*ICONS CSS Starts from here*/
+
+.social-icons {
+    display: flex;/*to make them appear side by side*/
+    justify-content: center;/*the content should be in the middle*/
+    margin: 30px 0;/*margin from top-bottom is 30px and left-right is 0px*/
+
+}
+
+.social-icons a {
+    width: 40px;/*width is specified*/
+    height: 40px;/*height is specified*/
+    border-radius: 50%;/*to make it appear in circle*/
+    text-decoration: none;/*to remove any decorations*/
+    background: rgba(255, 255, 255, 0.1);/*background color*/
+    display: flex;/*to display items side by side*/
+    align-items: center;/*to make icons appear in the center along y axis*/
+    justify-content: center;/*to make icons appear in the center along x axis*/
+    margin: 0 10px;/*margin form left-right to make a gap between them*/
+    color: white;/*color white*/
+    transition: all 0.3s;/*when hovered transition is defined*/
+}
+
+.social-icons a:hover {
+    background: #6c5ce7;/*transition is turning into blue color*/
+    transform: translateY(-3px);/*transform is applied , it will move along y axis*/
+}
+
+.copyright {
+    color: #b8b8b8;/*copy right content text color*/
+    font-size: 14px;/*font size of text*/
+    margin-top: 30px;/*margin from top to make space from above content*/
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* For tablets and smaller desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .main h1 {
+        font-size: 50px;/*main title size reduced*/
+    }
+   
+    .main-image {
+        width: 450px;/*image width is specified*/
+    }
+
+    .feature-card {
+        padding: 30px 20px;/*padding for feature cards*/
+    }
+}
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .header {
+        padding: 20px 5%;
+    }
+
+    /* Navigation adjustments */
+    .nav-links {
+        display: none; /* Hide desktop nav */
+    }
+
+    /* Mobile menu button would go here */
+
+    /* main section adjustments */
+    .main {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 150px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .main-content {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .main-buttons {
+        justify-content: center;
+    }
+
+    .main-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Stats section adjustments */
+    .stats {
+        flex-direction: column;
+        gap: 40px;
+        margin: 50px 0;
+        padding: 50px 5%;
+    }
+
+    /* Features grid adjustments */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* How it works steps */
+    .steps {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    .steps::before {
+        display: none;
+    }
+
+    /* Testimonial adjustments */
+    .testimonial-card {
+        padding: 30px;
+    }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+    /* Typography adjustments */
+    .main h1 {
+        font-size: 36px;
+    }
+
+    .main p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    /* Button adjustments */
+    .main-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mainright-button,
+    .secondary-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Stats adjustments */
+    .stat-number {
+        font-size: 40px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+    }
+
+    /* Feature card adjustments */
+    .feature-card {
+        padding: 25px 15px;
+    }
+
+    .feature-icon {
+        font-size: 40px;
+    }
+
+    .feature-title {
+        font-size: 20px;
+    }
+
+    /* Testimonial adjustments */
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    /* Footer adjustments */
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+    .footer-links li {
+        margin: 10px;
+    }
+}
+
+/* For very small devices (360px and below) */
+@media (max-width: 360px) {
+    .main h1 {
+        font-size: 30px;
+    }
+
+    .main p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .footer-links li {
+        margin: 5px;
+    }
+}
+
+ 
