@@ -1,4 +1,4 @@
-#🚀 Features
+# 🚀 Features
 💎 Modern UI Design: Sleek dark theme with purple accents for a premium crypto experience
 
 ✨ Interactive Elements: Hover animations, gradient borders, and floating coin effects
@@ -9,7 +9,7 @@
 
 ⚡ Performance Optimized: Lightweight and fast-loading
 
-#🛠️ Tech Stack
+# 🛠️ Tech Stack
 Frontend: HTML5, CSS3, JavaScript
 
 Styling: CSS Grid, Flexbox, custom animations
@@ -47,7 +47,7 @@ Testimonials: Client feedback section
 
 CTA: Gradient background call-to-action
 
-#📱 Responsive Breakpoints
+# 📱 Responsive Breakpoints
 Desktop: 1024px and up
 
 Tablet: 768px - 1023px
@@ -56,7 +56,7 @@ Mobile: 480px - 767px
 
 Small Mobile: Below 480px
 
-#🤝 Contributing
+# 🤝 Contributing
 Fork the repository
 
 Create your feature branch (git checkout -b feature/your-feature)
