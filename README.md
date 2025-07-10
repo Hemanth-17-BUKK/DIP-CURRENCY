@@ -16,8 +16,6 @@ Styling: CSS Grid, Flexbox, custom animations
 
 Icons: Font Awesome
 
-Typography: Google Fonts (Poppins)
-
 Design: Pure CSS effects (no external libraries)
 
 📝 Installation
